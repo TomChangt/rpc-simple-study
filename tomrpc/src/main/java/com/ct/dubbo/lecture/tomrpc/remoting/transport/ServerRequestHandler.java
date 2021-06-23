@@ -29,8 +29,6 @@ public class ServerRequestHandler extends ChannelInboundHandlerAdapter {
 
             String serviceName = data.getContent().getServiceName();
 
-            String method = data.getContent().getMethodName();
-
             Object provider = registryMap.get(serviceName);
             Object result = null;
             try {
